@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // Untuk fungsi sqrt dan pow
+#include <cmath> 
 
 // Struktur untuk merepresentasikan sebuah titik dalam 2D
 struct Point {

@@ -1,53 +1,53 @@
 #include <iostream>
-#include <cmath> // For sqrt and pow
+#include <cmath> // Untuk sqrt dan pow
 
 class Point {
 private:
-    double x; // x coordinate
-    double y; // y coordinate
+    double x; // Koordinat x
+    double y; // Koordinat y
 
 public:
-    // Default constructor
+    // Konstruktor default
     Point() : x(0), y(0) {}
 
-    // Constructor with parameters
+    // Konstruktor dengan parameter
     Point(double x, double y) : x(x), y(y) {}
 
-    // Method to calculate distance from the origin (0, 0)
+    // Metode untuk menghitung jarak dari titik asal (0, 0)
     double distanceFromOrigin() const {
         return std::sqrt(std::pow(x, 2) + std::pow(y, 2));
     }
 
-    // Getter for x coordinate
+    // Getter untuk koordinat x
     double getX() const {
         return x;
     }
 
-    // Getter for y coordinate
+    // Getter untuk koordinat y
     double getY() const {
         return y;
     }
 
-    // Method to display the point coordinates
+    // Metode untuk menampilkan koordinat titik
     void displayPoint() const {
-        std::cout << "Point(" << x << ", " << y << ")" << std::endl;
+        std::cout << "Titik(" << x << ", " << y << ")" << std::endl;
     }
 };
 
 int main() {
-    // Create an instance of the Point class using the default constructor
+    // Membuat instance dari kelas Point menggunakan konstruktor default
     Point p1;
     p1.displayPoint();
-    std::cout << "Distance from Origin: " << p1.distanceFromOrigin() << std::endl;
+    std::cout << "Jarak dari Titik Asal: " << p1.distanceFromOrigin() << std::endl;
 
-    // Wait for user input before showing the next point
-    std::cout << "Press Enter to continue..." << std::endl;
-    std::cin.get(); // Wait for Enter key press
+    // Menunggu input pengguna sebelum menampilkan titik selanjutnya
+    std::cout << "Tekan Enter untuk melanjutkan..." << std::endl;
+    std::cin.get(); // Menunggu tekanan tombol Enter
 
-    // Create an instance of the Point class using the parameterized constructor
+    // Membuat instance dari kelas Point menggunakan konstruktor parameter
     Point p2(3, 4);
     p2.displayPoint();
-    std::cout << "Distance from Origin: " << p2.distanceFromOrigin() << std::endl;
+    std::cout << "Jarak dari Titik Asal: " << p2.distanceFromOrigin() << std::endl;
 
     return 0;
 }

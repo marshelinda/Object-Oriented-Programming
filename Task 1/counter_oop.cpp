@@ -2,37 +2,37 @@
 
 class Counter {
 private:
-    int count; // private member variable to hold the count
+    int count; // variabel anggota privat untuk menyimpan jumlah
 
 public:
-    // Constructor to initialize the count to zero
+    // Konstruktor untuk menginisialisasi jumlah ke nol
     Counter() : count(0) {}
 
-    // Method to increment the count
+    // Metode untuk meningkatkan jumlah
     void increment() {
         count++;
     }
 
-    // Method to get the current count
+    // Metode untuk mendapatkan jumlah saat ini
     int getCount() const {
         return count;
     }
 };
 
 int main() {
-    Counter myCounter; // Create an instance of the Counter class
+    Counter myCounter; // Membuat sebuah instance dari kelas Counter
 
-    // Increment the counter a few times
+    // Meningkatkan jumlah beberapa kali
     myCounter.increment();
     myCounter.increment();
     myCounter.increment();
 
-    // Prompt the user to press Enter before displaying the count
+    // Meminta pengguna untuk menekan Enter sebelum menampilkan jumlah
     std::cout << "Tekan Enter untuk melihat jumlah saat ini..." << std::endl;
-    std::cin.ignore(); // Wait for user input (press Enter)
+    std::cin.ignore(); // Menunggu input pengguna (tekan Enter)
 
-    // Get and display the current count
-    std::cout << "Current count: " << myCounter.getCount() << std::endl;
+    // Mengambil dan menampilkan jumlah saat ini
+    std::cout << "Jumlah saat ini: " << myCounter.getCount() << std::endl;
 
     return 0;
 }
